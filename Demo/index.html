@@ -14,26 +14,47 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/png" href="../Assets/Favicon/favicon.png">
 
-	<!-- Webfonts -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat+Alternates:wght@400;500&display=swap"
-		rel="stylesheet">
-
 	<!-- CSS styling -->
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/argon.css">
 	<link rel="stylesheet" type="text/css" href="../CSS/hegel-argon.css">
 </head>
 
 <body>
 	<!-- Main container -->
 	<div id="main">
+		<div class="autohide navbar">
+			<!-- Navbar grid -->
+			<div class="navbar-layout">	
+				<!-- Banner and menu button -->
+				<div class="nav-banner">Hegel<span class="highlight">.</span></div>
+				<div class="nav-menu-btn small button">Menu</div>
+
+				<!-- Navbar content box -->
+				<div class="nav-links-container inset">
+					<!-- Navbar links list -->
+					<div class="list-box">
+						<a class="small button" href="#button_grid">Containers & Widgets</a>
+						<a class="small button" href="#text_formatting_example">Text</a>
+						<div class="small button">Link</div>
+						<div class="small pulse button">Link!</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Content -->
 		<div id="panel">
+			<!-- Navbar hide limit -->
+			<div id="navbar_hidepoint"></div>
+
 			<!-- Main heading -->
-			<div id=panel_heading class="blazon">Argon<span class="highlight">.</span></div>
+			<div id=panel_heading class="blazon">
+				Hegel <span class="highlight">::</span> Argon<span class="highlight">.</span>
+			</div>
 
 			<!-- Examples grid -->
-			<div id="panel_grid">
+			<div class="masonry-layout">
 				<!-- Feature image -->
 				<div class="inset" style="grid-column: 1/-1;">	
 					<div class="image-container">
@@ -41,23 +62,37 @@
 					</div>
 				</div>
 
-				<!-- Large buttons -->
-				<div id="button_grid">
-					<div class="button"><img src="Assets/Icons/github.svg" width="50"></div>
-					<div class="button"><img src="Assets/Icons/corkran.svg" width="50"></div>
-					<div class="button"><img src="Assets/Icons/discord.svg" width="50"></div>
-					<div class="button"><img src="Assets/Icons/youtube.svg" width="50"></div>
+				<!-- Section heading -->
+				<div class="card" style="grid-column: 1/-1;">
+					<div class="inset" style="width: 100%;">
+						<div class="heading">Examples</div>	
+						<p>
+							Examples of the main structure classes Hegel has to offer, and the styling
+							that Argon provides.
+						</p>
+					</div>
 				</div>
 
-				<!-- Heading example -->
+				<!-- Large buttons -->
+				<div>
+					<div id="button_grid">
+						<div class="button"><img src="Assets/Icons/github.svg" width="50"></div>
+						<div class="button"><img src="Assets/Icons/corkran.svg" width="50"></div>
+						<div class="button"><img src="Assets/Icons/discord.svg" width="50"></div>
+						<div class="button"><img src="Assets/Icons/youtube.svg" width="50"></div>
+					</div>
+				</div>
+
+				<!-- Cards example -->
 				<div class="card">
-					<div class="heading">Heading</div>
-					<p>The text above (slightly large, with pink line) is a heading.</p>
+					<div class="heading">Cards</div>
+					<p>All the examples you see here are inside cards.</p>
 				</div>
 
 				<!-- List box example -->
 				<div class="card" style="grid-column: -3/-1;">
 					<div class="heading">List Box</div>
+					<p>List boxes can be used to create brickwork-like grids of lots of small elements.</p>
 					<div class="list-box">
 						<div class="inset">Lorem</div>
 						<div class="inset">Necessitatibus</div>
@@ -76,6 +111,7 @@
 				<!-- Buttons example -->
 				<div class="card">
 					<div class="heading">Buttons</div>
+					<p>There are three kinds of buttons:</p>
 					<div class="list-box">
 						<div class="button">Regular</div>
 						<div class="button pulse">Pulse</div>
@@ -83,17 +119,57 @@
 					</div>
 				</div>
 
-				<!-- Links example -->
+				<!-- Inset example -->
 				<div class="card">
-					<div class="heading">Links</div>
+					<div id="inset_example" class="anchor"></div>
+					<div class="heading">Inset</div>
+					<div class="inset text">
+						You can put things (like this paragraph) into inset grooves, or boxes.
+						Use insets directly inside cards to create a solid effect.
+					</div>
+				</div>
+				
+				<!-- Image container example -->
+				<div class="card" style="grid-column: span 2; grid-row: span 2;">
+					<div class="heading">Images</div>
 					<p>
-						Links are formatted like so: 
-						<a href="https://en.wikipedia.org/wiki/Hyperlink">This is a link</a>
+						Use image containers for manageable images, and features like captions.
+						The inset seen below is not included, but it should be easy enough to implement, 
+						what? See <a href="#inset_example">above</a> if you missed that section.
+					</p>
+					<div class="inset">	
+						<div class="image-container">
+							<img src="Assets/Images/example.jpg" alt="Image" height="300px">
+							<div class="caption-overlay">This is a caption. Image by someone.</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Navbar -->
+				<div class="card">
+					<div class="heading">Navbar</div>
+					<p>
+						Click the buttons below and scroll up/down to see a demo of both types of 
+						navbars. Resize page to see responsive navbar layout.
+					</p>
+					<div class="list-box">
+						<div class="small button" onclick="$('.navbar').removeClass('autohide')">Fixed</div>
+						<div class="small button" onclick="$('.navbar').addClass('autohide')">Autohide</div>
+					</div>
+				</div>
+
+				<!-- Anchors -->
+				<div class="card">
+					<div class="heading">Anchors</div>
+					<p>
+						We handle anchors with Javascript; clicking on anchors doesn't change the url,
+						so page flow remains the same. Also, don't worry about the navbar overlapping
+						the target - we handle that too.
 					</p>
 				</div>
 
 				<!-- Text example -->
-				<div id="text_formatting" class="card" style="grid-column: 1/-1;">
+				<div id="text_formatting_example" class="card" style="grid-column: 1/-1;">
 					<div class="heading">Text Formatting</div>
 					<p class="drop-caps">
 						Nihil expedita sapiente non dolorem. Nostrum aut explicabo praesentium. 
@@ -114,41 +190,36 @@
 					</blockquote>
 				</div>
 
-				<!-- Image container example -->
-				<div class="card" style="grid-column: span 2;">
-					<div class="heading">Images</div>
-					<div class="inset">	
-						<div class="image-container">
-							<img src="Assets/Images/example.jpg" alt="Image">
-							<div class="caption-overlay">This is a caption. Image by someone.</div>
-						</div>
-					</div>
+				<!-- Links -->
+				<div class="card">
+					<div class="heading">Links</div>
+					<p>
+						Links are formatted like so: <a href="#">link</a>. Underline for accessibility,
+						and hover/active color-change for feedback.
+					</p>
 				</div>
 
-				<!-- Todo -->
+				<!-- To do -->
 				<div class="card">
-					<div class="heading">TODO</div>
+					<div class="heading">To Do</div>
 					<p>
-						More features to come, both for Hegel (really, there really isn't any Hegel in 
-						this - it's all Argon), and for the website; I'll add the ability to view the
-						code for examples soon. 
-					</p>
-					<p>
-						Upcoming features include navbars, actual structure	classes (that's Hegel), 
-						and maybe a few scripts.
-					</p>
-					<p>
-						<span class="italic">- The Developer</span>
+						The navbar still is unclean on the backend, and the navbar-layout is too specific.
+						May have to remove. Same with masonry class. More features (form elements, etc.) to come.
 					</p>
 				</div>
 
 				<!-- Footer -->
 				<div id="footer" class="inset" style="grid-column: 1/-1;">	
-					<p><span class="italic">Copyright © Aarush Kumbhakern 2020</span></p>
+					<p class="bold">Copyright © Aarush Kumbhakern 2020</p>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../JS/hegel.js"></script>
+	<script src="JS/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,145 @@
+/* GLOBAL */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* LAYOUTS */
+
+.masonry-layout {
+	display: grid;
+	grid-gap: 1rem;
+	grid-auto-flow: dense;
+  	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+}
+
+.navbar-layout {
+	display: grid;
+	align-items: center;
+	grid-auto-flow: column;
+	grid-template: 
+		"banner links";
+}
+
+.navbar-layout .nav-banner {
+	grid-area: banner;
+	justify-self: start;
+}
+
+.navbar-layout .nav-menu-btn {
+	display: none;
+	justify-self: end;
+	grid-area: menu-btn;
+}
+
+.navbar-layout .nav-links-container {
+	grid-area: links;
+	justify-self: end;
+}
+
+
+/* GENERIC CONTAINERS */
+
+.list-box {
+	display: flex;
+	row-gap: 0.5em;
+	flex-wrap: wrap;
+	column-gap: 0.5em;
+	align-items: center;
+	flex-direction: row;
+}
+
+.list-box.justify {
+	justify-content: space-between;
+}
+
+.list-box.column {
+	align-items: stretch;
+	flex-direction: column;
+}
+
+/* IMAGES */
+
+.image-container {
+	overflow: hidden;
+	position: relative;
+}
+
+.image-container img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.image-container .caption-overlay {
+	right: 0;
+	bottom: 0;
+	max-width: 80%;
+	position: absolute;
+	white-space: nowrap;
+}
+
+
+/* BUTTONS */
+
+.button {
+	cursor: pointer;
+	user-select: none;
+	display: inline-block;
+}
+
+
+/* ANCHORS */
+
+.anchor {
+	width: 0;
+	height: 0;
+	visibility: none;
+	transform: translateY(-1em);
+}
+
+
+/* NAVBAR */
+
+.navbar {
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	position: sticky;
+	box-sizing: border-box;
+}
+
+.navbar.autohide.hide {
+	transform: translateY(-100%);
+}
+
+
+/* BREAKPOINTS */
+
+@media only screen and (max-width: 650px) {
+	.masonry-layout {
+		display: flex;
+		flex-direction: column;
+	}
+	.navbar-layout {
+		grid-auto-flow: row;
+		grid-template: 
+			"banner menu-btn"
+			"links links";
+	}
+	.navbar-layout .nav-menu-btn {
+		display: block;
+	}
+	.navbar-layout .nav-links-container {
+		display: none;
+		margin-top: 1em;
+		justify-self: stretch;
+	}
+	.navbar-layout.show-links .nav-links-container {
+		display: block;
+	}
+}

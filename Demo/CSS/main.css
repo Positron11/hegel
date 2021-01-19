@@ -8,28 +8,20 @@
 	margin-bottom: 1rem;
 }
 
-#panel_grid {
-	display: grid;
-	grid-gap: 1rem;
-	grid-auto-flow: dense;
-  	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-}
-
 #button_grid {
+	height: 100%;
 	display: grid;
 	grid-gap: 1rem;
 	grid-template-rows: repeat(2, auto);
 	grid-template-columns: repeat(2, auto);
 }
 
-#footer {
-	text-align: center;
+#button_grid .button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-
-@media only screen and (max-width: 650px) {
-	#panel_grid {
-		display: flex;
-		flex-direction: column;
-	}
+#footer {
+	text-align: center;
 }
