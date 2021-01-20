@@ -1,0 +1,96 @@
+/* GLOBAL */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* GENERIC PROPERTIES */
+
+.full-width {
+	width: 100%;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	position: sticky;
+	box-sizing: border-box;
+}
+
+.navbar.autohide.hide {
+	transform: translateY(-100%);
+}
+
+
+/* CARDS & BUTTONS */
+
+/* Buttons */
+
+.button {
+	cursor: pointer;
+	user-select: none;
+	display: inline-block;
+}
+
+
+/* GENERIC CONTAINERS */
+
+/* Alignment */
+
+.center-align-text {
+	text-align: center;
+}
+
+.right-align-text {
+	text-align: right;
+}
+
+/* List boxes */
+
+.list-box {
+	row-gap: 1em;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1em;
+	align-items: center;
+}
+
+.list-box.compact {
+	row-gap: 0.5em;
+	column-gap: 0.5em;
+}
+
+.list-box.column {
+	align-items: stretch;
+	flex-direction: column;
+}
+
+/* Image containers */
+
+.image-container {
+	overflow: hidden;
+	position: relative;
+}
+
+.image-container img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.image-container .image-caption {
+	right: 0;
+	bottom: 0;
+	max-width: 80%;
+	position: absolute;
+	white-space: nowrap;
+}

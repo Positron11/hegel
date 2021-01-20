@@ -1,7 +1,3 @@
-:root {
-	--theme-color: #f53d7a;
-}
-
 /* GLOBAL */
 
 body {
@@ -11,26 +7,29 @@ body {
 	background: #23252E;
 }
 
-/* TAGS */
 
-a {
-	color: inherit;
-	transition: 0.2s ease;
-}
+/* TEXT */
 
-a:hover:not(.button), a:active:not(.button) {
-	color: var(--theme-color);
-}
-
-
-/* TEXT FORMATTING */
+/* Selections */
 
 ::selection {
 	color: white;
-	background-color: var(--theme-color);
+	background-color: #f53d7a;
 }
 
-p, blockquote, .text {
+/* Links */
+
+a {
+	color: inherit;
+}
+
+a:visited {
+	color: #aaa;
+}
+
+/* Paragraphs */
+
+p, .text {
 	line-height: 1.5em;
 }
 
@@ -41,37 +40,35 @@ p.drop-caps::first-letter {
 	padding: 0.25rem 0.5rem 0 0.1rem;
 }
 
+/* Formatting */
+
 .bold {
 	font-weight: 600;
+}
+
+.small {
+	font-size: 0.9em;
 }
 
 .italic {
 	font-style: italic;
 }
 
-.underline {
-	text-decoration: underline 2px var(--theme-color);
-}
-
 .highlight {
+	color: #f53d7a;
 	font-weight: 500;
-	color: var(--theme-color);
 }
 
-blockquote {
-	margin-left: 0;
-	font-style: italic;
-	padding-left: 1rem;
-	border-left: 4px solid var(--theme-color);
+.underline {
+	text-decoration: underline 2px #f53d7a;
 }
+
+/* Headings */
 
 .blazon {
 	font-size: 4em;
 	font-weight: 500;
 }
-
-
-/* HEADERS */
 
 .heading {
 	font-size: 2em;
@@ -80,11 +77,24 @@ blockquote {
 	margin-bottom: 1rem;
 	padding-bottom: 1rem;
 	text-overflow: ellipsis;
-	border-bottom: 2px solid var(--theme-color);
+	border-bottom: 2px solid #f53d7a;
 }
 
 
-/* BUTTONS & CARDS */
+/* NAVBAR */
+
+.navbar {
+	padding: 1em 2em;
+	background: #2a2c35;	
+	border-bottom: 3px solid #0f1014;
+	box-shadow: 0 0.2em 0.2em 0.1em rgba(0,0,0,0.2);
+	transition: 0.2s ease;
+}
+
+
+/* CARDS & BUTTONS */
+
+/* Cards */
 
 .card, .button {
 	padding: 1em;
@@ -95,6 +105,8 @@ blockquote {
 	border-bottom: 3px solid #0f1014;
 	box-shadow: 0 0 0.5em 0.1em rgba(0,0,0,0.1);
 }
+
+/* Buttons */
 
 .button {
 	font-weight: 500;
@@ -112,21 +124,46 @@ blockquote {
 	animation: button-pulse 1.5s ease infinite;
 }
 
-.button:hover {
-	background-color: #f53d7a;
-	border-right: 3px solid #c43061;
-	border-bottom: 3px solid #771737;
-	box-shadow: 0 0 1em 0.5em rgba(255, 31, 105, 0.3);
-}
-
 .button:active {
 	margin: 0 3px 3px 0;
-	background: #f53d7a;
 	transform: translate(3px, 3px);
+	background: #f53d7a !important;
 	border-right: 0px solid #c43061 !important;
 	border-bottom: 0px solid #771737 !important;
-	box-shadow: 0 0 0.5em 0.3em rgba(255, 31, 105, 0.5);
+	box-shadow: 0 0 0.5em 0.3em rgba(255, 31, 105, 0.5) !important;
 }
+
+
+/* GENERIC CONTAINERS */
+
+/* Inset */
+
+.inset {
+	padding: 0.5em;
+	border-radius: 0.5em;
+	display: inline-block;
+	box-sizing: border-box;
+	border-top: 3px solid #0f1014;
+	border-left: 3px solid #181920;
+	background-color: rgba(0,0,0,0.1);
+	box-shadow: 0 0 0.5em 0.1em rgba(0,0,0,0.2) inset;
+}
+
+/* Image containers */
+
+.image-container {
+	border-radius: 0.25em;
+}
+
+.image-container .image-caption {
+	padding: 0.5em;
+	font-size: 0.8em;
+	border-radius: 0.5em 0 0 0;
+	background-color: rgba(0,0,0,0.5);
+}
+
+
+/* ANIMATIONS */
 
 @keyframes button-pulse {
 	0% {
@@ -150,45 +187,15 @@ blockquote {
 }
 
 
-/* GENERIC CONTAINERS */
+/* INPUT DEVICE SPECIFIC EVENTS */
 
-.inset {
-	padding: 0.5em;
-	border-radius: 0.5em;
-	display: inline-block;
-	box-sizing: border-box;
-	background-color: #23252E;
-	border-top: 3px solid #0f1014;
-	border-left: 3px solid #181920;
-	box-shadow: 0 0 0.5em 0.1em rgba(0,0,0,0.2) inset;
-}
+/* Mouse */
 
-
-/* IMAGES */
-
-.image-container {
-	border-radius: 0.25em;
-}
-
-.image-container .caption-overlay {
-	padding: 0.5em;
-	font-size: 0.8em;
-	border-radius: 0.5em 0 0 0;
-	background-color: rgba(0,0,0,0.5);
-}
-
-
-/* NAVBAR */
-
-.navbar {
-	padding: 1em 2em;
-	background: #2a2c35;	
-	border-bottom: 3px solid #0f1014;
-	box-shadow: 0 0.2em 0.2em 0.1em rgba(0,0,0,0.2);
-	transition: 0.2s ease;
-}
-
-.navbar .nav-banner {
-	font-size: 1.5em;
-	font-weight: 500;
+@media (pointer:fine) {
+	.button:hover {
+		background-color: #f53d7a;
+		border-right: 3px solid #c43061;
+		border-bottom: 3px solid #771737;
+		box-shadow: 0 0 1em 0.5em rgba(255, 31, 105, 0.3);
+	}
 }

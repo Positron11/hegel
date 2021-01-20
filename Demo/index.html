@@ -16,205 +16,222 @@
 
 	<!-- CSS styling -->
 	<link rel="stylesheet" type="text/css" href="CSS/main.css">
-	<link rel="stylesheet" type="text/css" href="../CSS/argon.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/hegel.css">
 	<link rel="stylesheet" type="text/css" href="../CSS/hegel-argon.css">
 </head>
 
+
 <body>
-	<!-- Main container -->
-	<div id="main">
-		<div class="autohide navbar">
-			<!-- Navbar grid -->
-			<div class="navbar-layout">	
-				<!-- Banner and menu button -->
-				<div class="nav-banner">Hegel<span class="highlight">.</span></div>
-				<div class="nav-menu-btn small button">Menu</div>
+	<!-- Top anchor -->
+	<div id="page_top"></div>
 
-				<!-- Navbar content box -->
-				<div class="nav-links-container inset">
-					<!-- Navbar links list -->
-					<div class="list-box">
-						<a class="small button" href="#button_grid">Containers & Widgets</a>
-						<a class="small button" href="#text_formatting_example">Text</a>
-						<div class="small button">Link</div>
-						<div class="small pulse button">Link!</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Content -->
-		<div id="panel">
-			<!-- Navbar hide limit -->
-			<div id="navbar_hidepoint"></div>
 
-			<!-- Main heading -->
-			<div id=panel_heading class="blazon">
-				Hegel <span class="highlight">::</span> Argon<span class="highlight">.</span>
-			</div>
-
-			<!-- Examples grid -->
-			<div class="masonry-layout">
-				<!-- Feature image -->
-				<div class="inset" style="grid-column: 1/-1;">	
-					<div class="image-container">
-						<img src="Assets/Images/example.jpg" alt="Image">
-					</div>
-				</div>
-
-				<!-- Section heading -->
-				<div class="card" style="grid-column: 1/-1;">
-					<div class="inset" style="width: 100%;">
-						<div class="heading">Examples</div>	
-						<p>
-							Examples of the main structure classes Hegel has to offer, and the styling
-							that Argon provides.
-						</p>
-					</div>
-				</div>
-
-				<!-- Large buttons -->
-				<div>
-					<div id="button_grid">
-						<div class="button"><img src="Assets/Icons/github.svg" width="50"></div>
-						<div class="button"><img src="Assets/Icons/corkran.svg" width="50"></div>
-						<div class="button"><img src="Assets/Icons/discord.svg" width="50"></div>
-						<div class="button"><img src="Assets/Icons/youtube.svg" width="50"></div>
-					</div>
-				</div>
-
-				<!-- Cards example -->
-				<div class="card">
-					<div class="heading">Cards</div>
-					<p>All the examples you see here are inside cards.</p>
-				</div>
-
-				<!-- List box example -->
-				<div class="card" style="grid-column: -3/-1;">
-					<div class="heading">List Box</div>
-					<p>List boxes can be used to create brickwork-like grids of lots of small elements.</p>
-					<div class="list-box">
-						<div class="inset">Lorem</div>
-						<div class="inset">Necessitatibus</div>
-						<div class="inset">Error</div>
-						<div class="inset">Veniam</div>
-						<div class="inset">Ducimus</div>
-						<div class="inset">Lorem</div>
-						<div class="inset">Necessitatibus</div>
-						<div class="inset">Error</div>
-						<div class="inset">Veniam</div>
-						<div class="inset">Ducimus</div>
-						<div class="inset">Necessitatibus</div>
-					</div>
-				</div>
-
-				<!-- Buttons example -->
-				<div class="card">
-					<div class="heading">Buttons</div>
-					<p>There are three kinds of buttons:</p>
-					<div class="list-box">
-						<div class="button">Regular</div>
-						<div class="button pulse">Pulse</div>
-						<div class="small button">Small</div>
-					</div>
-				</div>
-
-				<!-- Inset example -->
-				<div class="card">
-					<div id="inset_example" class="anchor"></div>
-					<div class="heading">Inset</div>
-					<div class="inset text">
-						You can put things (like this paragraph) into inset grooves, or boxes.
-						Use insets directly inside cards to create a solid effect.
-					</div>
-				</div>
-				
-				<!-- Image container example -->
-				<div class="card" style="grid-column: span 2; grid-row: span 2;">
-					<div class="heading">Images</div>
-					<p>
-						Use image containers for manageable images, and features like captions.
-						The inset seen below is not included, but it should be easy enough to implement, 
-						what? See <a href="#inset_example">above</a> if you missed that section.
-					</p>
-					<div class="inset">	
-						<div class="image-container">
-							<img src="Assets/Images/example.jpg" alt="Image" height="300px">
-							<div class="caption-overlay">This is a caption. Image by someone.</div>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Navbar -->
-				<div class="card">
-					<div class="heading">Navbar</div>
-					<p>
-						Click the buttons below and scroll up/down to see a demo of both types of 
-						navbars. Resize page to see responsive navbar layout.
-					</p>
-					<div class="list-box">
-						<div class="small button" onclick="$('.navbar').removeClass('autohide')">Fixed</div>
-						<div class="small button" onclick="$('.navbar').addClass('autohide')">Autohide</div>
-					</div>
-				</div>
-
-				<!-- Anchors -->
-				<div class="card">
-					<div class="heading">Anchors</div>
-					<p>
-						We handle anchors with Javascript; clicking on anchors doesn't change the url,
-						so page flow remains the same. Also, don't worry about the navbar overlapping
-						the target - we handle that too.
-					</p>
-				</div>
-
-				<!-- Text example -->
-				<div id="text_formatting_example" class="card" style="grid-column: 1/-1;">
-					<div class="heading">Text Formatting</div>
-					<p class="drop-caps">
-						Nihil expedita sapiente non dolorem. Nostrum aut explicabo praesentium. 
-						Debitis qui qui sint quam. Molestiae adipisci culpa corrupti ut. Voluptatum 
-						velit ad impedit placeat animi deserunt vel. Quis ut odio delectus rerum animi 
-						asperiores. Quaerat et iure eum consequatur.
-					</p>
-					<p>
-						Text: <span class="highlight">Highlight</span>, <span class="bold">bold</span>, 
-						<span class="italic">italicized</span>, <span class="underline">underlined</span>, 
-						<span class="bold italic underline">or a combination of the three<span>. 
-					</p>
-					<blockquote>
-						<b>This is a blockquote</b>. Aliquid unde vel ipsam harum cum. Quasi dicta et 
-						temporibus dignissimos eum illo excepturi. Architecto sunt nihil veniam. 
-						Consectetur in qui molestiae ad quasi dignissimos nulla. Eum saepe impedit 
-						qui. Minus quasi ratione aliquid voluptatum officia ut et et.
-					</blockquote>
-				</div>
-
-				<!-- Links -->
-				<div class="card">
-					<div class="heading">Links</div>
-					<p>
-						Links are formatted like so: <a href="#">link</a>. Underline for accessibility,
-						and hover/active color-change for feedback.
-					</p>
-				</div>
-
-				<!-- To do -->
-				<div class="card">
-					<div class="heading">To Do</div>
-					<p>
-						The navbar still is unclean on the backend, and the navbar-layout is too specific.
-						May have to remove. Same with masonry class. More features (form elements, etc.) to come.
-					</p>
-				</div>
-
-				<!-- Footer -->
-				<div id="footer" class="inset" style="grid-column: 1/-1;">	
-					<p class="bold">Copyright © Aarush Kumbhakern 2020</p>
+	<!-- Navbar -->
+	<div class="autohide navbar">
+		<div id="nav_grid">
+			<div id="nav_banner">Hegel<span class="highlight">.</span></div>
+			<div id="nav_menu_btn" class="small button">Menu</div>
+			<div id="nav_links_container" class="inset">
+				<div class="compact list-box">
+					<a href="#examples_grid" class="small button">Examples</a>
+					<a href="#page_top" class="small button">Top</a>
+					<a href="#page_bottom" class="small button">End</a>
+					<div class="small pulse button">Link!</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
+	<!-- Main container -->
+	<div id="main">
+		<!-- Blazon -->
+		<div class="blazon col-span-all" style="margin-bottom: 1.5rem">
+			Hegel <span class="highlight">::</span> Argon<span class="highlight">.</span>
+		</div>
+
+
+		<!-- Examples grid -->
+		<div id="examples_grid">
+			<!-- Section heading -->
+			<div class="card col-span-all">
+				<div class="full-width inset">
+					<div class="heading">Examples</div>
+					<p>
+						Examples of the main structure classes Hegel has to offer, and the styling 
+						that Argon provides.
+					</p>
+				</div>
+			</div>
+			
+			<!-- Button example -->
+			<div class="card row-span-2">
+				<div class="heading">Buttons</div>
+				<p>
+					There are two kinds of buttons (small, regular), and two states (normal, pulse).
+				</p>
+				<div class="full-width inset">
+					<div class="compact column list-box">
+						<div class="button">Normal regular</div>
+						<div class="small button">Normal small</div>
+						<div class="pulse button">Pulse regular</div>
+						<div class="small pulse button">Pulse small</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Card example -->
+			<div class="card">
+				<div class="heading">Cards</div>
+				<p>
+					Everything you see here is inside a card. Cards can be stacked, and will take up 
+					the	maximum possible width.
+				</p>
+			</div>
+
+			<!-- Inset example -->
+			<div class="card">
+				<div class="heading">Insets</div>
+				<div class="inset text">
+					You can put things (like this paragraph) into inset grooves, or boxes. Use insets 
+					directly inside cards to create a solid effect.
+				</div>
+			</div>
+
+			<!-- List box example -->
+			<div class="card col-span-2 row-span-2">
+				<div class="heading">List boxes</div>
+				<p>
+					List boxes can be used to create brickwork-like grids of small elements.
+					They can have compact or regular spacing, and they can flow vertically or 
+					horizontally.
+				</p>
+				<div class="full-width inset">					
+					<div class="column list-box">					
+						<div class="card list-box">
+							<div class="inset">This is</div>
+							<div class="inset">a regular</div>
+							<div class="inset">spaced</div>
+							<div class="inset">list box</div>
+						</div>
+						<div class="card compact list-box">
+							<div class="inset">This is</div>
+							<div class="inset">a compact</div>
+							<div class="inset">spaced</div>
+							<div class="inset">list box</div>
+						</div>
+						<div class="card highlight text">
+							Both examples above (and this text) are in a column list box.
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Paragraph example -->
+			<div class="card col-span-2">
+				<div class="heading">Paragraphs</div>
+				<p class="drop-caps">
+					Paragraphs are formatted to have a 1.5em line-height, for best readability. For 
+					text, either use paragraph tags, or apply the text tag. This is an example of a 
+					drop-caps paragraph.
+				</p>
+			</div>
+
+			<!-- Text formatting example -->
+			<div class="card">
+				<div class="heading">Formatting</div>
+				<p>
+					Text can be formatted as <span class="bold">bold</span>, 
+					<span class="highlight">highlight</span>, <span class="italic">italic</span>,
+					<span class="underline">underlined</span>, <span class="small">small</span>, or a 
+					<span class="small bold italic underline">combination of any styles</span>.
+				</p>
+			</div>
+
+			<!-- Links example -->
+			<div class="card">
+				<div class="heading">Links</div>
+				<p>
+					Links are formatted like so: 
+					<a href="https://wikipedia.org/wiki/Hyperlink" target="blank">This is a link</a>. 
+					Visited links are greyed out.
+				</p>
+			</div>
+
+			<!-- Navbar example -->
+			<div class="card row-span-2">
+				<div class="heading">Navbar</div>
+				<p>
+					You have a choice of two types of navbars. Click the buttons below and scroll to
+					see a demo of each. We handle only the navbar container, what goes inside, and 
+					handling responsiveness is up to you - at least, for now.
+				</p>
+				<div class="full-width inset">
+					<div class="compact column list-box">
+						<div class="small button" onclick="$('.navbar').removeClass('autohide hide')">Fixed</div>
+						<div class="small button" onclick="$('.navbar').addClass('autohide')">Autohide</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Image container example -->
+			<div class="card col-span-2 row-span-2">
+				<div class="heading">Images</div>
+				<p>
+					Use image containers for features like captions.
+				</p>
+				<div class="inset">
+					<div class="image-container">
+						<img src="Assets/Images/example.jpg" alt="Example image.">
+						<div class="image-caption">This is a caption.</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Navbar limit example -->
+			<div class="card">
+				<div class="heading">Autohide Navbar</div>
+				<p>
+					An autohide hides when srolling down, either after passing its own height, or after
+					passing an element with the <span class="small highlight">navbar_hidepoint</span> id.
+				</p>
+			</div>
+
+			<!-- Anchors example -->
+			<div class="card">
+				<div class="heading">Anchors</div>
+				<p>
+					We take care of anchors for you - smooth scrolling, no url updates, and no worrying
+					about the navbar overlapping the target.
+				</p>
+			</div>
+
+			<!-- To do -->
+			<div class="card">
+				<div class="heading">To Do</div>
+				<p>
+					Add more features, try and make the navbar grid a native Hegel component. Maybe create
+					some masonry classes.
+				</p>
+			</div>
+		</div>
+
+
+		<!-- Footer -->
+		<div class="card" style="margin-top: 1.5rem">
+			<div class="full-width center-align-text inset">
+				<p class="small bold">
+					Hegel, style Argon. By Aarush Kumbhakern. View on 
+					<a href="https://github.com/Positron11/hegel">Github</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Bottom anchor -->
+	<div id="page_bottom"></div>
+
 
 	<!-- Scripts -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
