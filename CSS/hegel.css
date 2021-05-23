@@ -12,6 +12,10 @@ body {
 
 /* GENERIC PROPERTIES */
 
+.inline {
+	display: inline-block;
+}
+
 .full-width {
 	width: 100%;
 }

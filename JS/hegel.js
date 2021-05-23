@@ -4,7 +4,7 @@ $(function(){
 	lastScrollTop = 0;
 
 	
-	// Smooth scroll
+	// Anchor jumping
 	$(document).on('click', 'a[href^="#"]', function (e) {
 		// prevent url change
 		e.preventDefault();
@@ -13,20 +13,14 @@ $(function(){
 		var anchor_offset = $($(this).attr('href')).offset().top;
 
 		// set navbar offset
-		if ($(".navbar").hasClass("autohide")) { // if autohide
-			if (anchor_offset < $(window).scrollTop()) { // if scrolling up
-				nav_offset = $(".navbar").outerHeight() + 10;
-			} else { // if scrolling down
-				nav_offset = 10;
-			}
-		} else { // if not autohide
+		if ($(".navbar").hasClass("autohide") && anchor_offset >= $(window).scrollTop()) { // if autohide and scrolling up
+			nav_offset = 10;
+		} else { // if not autohide or if just scrolling down
 			nav_offset = $(".navbar").outerHeight() + 10;
 		}
 
-		// animate scroll
-		$('html, body').stop().animate({
-			scrollTop: anchor_offset - nav_offset
-		}, 100);
+		// scroll
+		$('html, body').scrollTop(anchor_offset - nav_offset);
 	});
 
 
