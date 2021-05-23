@@ -37,7 +37,7 @@ p, .text {
 /* Formatting */
 
 .bold {
-	font-weight: 800;
+	font-weight: 800 !important;
 }
 
 .small {
