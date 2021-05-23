@@ -5,7 +5,7 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	background: #23252E;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 
@@ -31,13 +31,13 @@ a:visited:not(.button) {
 /* Paragraphs */
 
 p, .text {
-	line-height: 1.5em;
+	line-height: 1.7em;
 }
 
 /* Formatting */
 
 .bold {
-	font-weight: 700;
+	font-weight: 800;
 }
 
 .small {
@@ -50,7 +50,7 @@ p, .text {
 
 .highlight {
 	color: #f53d7a;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .underline {
@@ -66,7 +66,6 @@ p, .text {
 
 .blazon {
 	font-size: 4em;
-	font-weight: 500;
 }
 
 .heading {
@@ -107,7 +106,7 @@ p, .text {
 /* Buttons */
 
 .button {
-	font-weight: 500;
+	font-weight: 600;
 	text-align: center;
 	text-decoration: none;
 	transition: background 0.2s ease-out, box-shadow 0.1s ease-out, border-color 0.2s ease-out;
